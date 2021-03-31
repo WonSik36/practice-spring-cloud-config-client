@@ -9,3 +9,5 @@ spring:
   cloud:
     config:
       label: main
+      username: admin
+      password: 1234
