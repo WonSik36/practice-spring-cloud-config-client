@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+    config:
+      label: main
+      username: admin
+      password: 1234
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server #config-server id

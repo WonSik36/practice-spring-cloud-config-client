@@ -1,13 +1,15 @@
 server:
   port: 8080
 
-spring:
-  application:
-    name: service
-  config:
-    import: configserver:http://localhost:8888
-  cloud:
-    config:
-      label: main
-      username: admin
-      password: 1234
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+
+    health:
+      show-details: always
+
+  endpoints:
+    web:
+      exposure:
+        include: health, info, shutdown, refresh
