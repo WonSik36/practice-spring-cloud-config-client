@@ -13,3 +13,7 @@ management:
     web:
       exposure:
         include: health, info, shutdown, refresh
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
