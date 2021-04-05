@@ -17,3 +17,21 @@ management:
 spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+
+  cloud:
+    stream:
+      bindings:
+        springCloudBusInput:
+          binder: 'cloudBusBinder'
+          destination: cloudBus.refresh
+      binders:
+        cloudBusBinder:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: config-client
+                password: 1234
+                virtual-host: cloud-bus
