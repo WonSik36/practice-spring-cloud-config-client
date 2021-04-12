@@ -30,7 +30,7 @@ spring:
           environment:
             spring:
               rabbitmq:
-                host: localhost
+                host: rabbitmq
                 port: 5672
                 username: config-client
                 password: 1234

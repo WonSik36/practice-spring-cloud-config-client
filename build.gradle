@@ -35,3 +35,8 @@ dependencyManagement {
 test {
     useJUnitPlatform()
 }
+
+
+bootJar {
+    archiveFileName = 'config-client.jar'
+}
